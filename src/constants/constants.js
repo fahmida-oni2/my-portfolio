@@ -3,7 +3,7 @@ export const HERO_CONTENT = {
   name: "Fahmida Rahman",
   image:Img,
   roles: [
-    "Full Stack Developer",
+    "MERN Stack Developer",
     "Frontend Developer",
     "EEE Graduate",
    
