@@ -4,7 +4,7 @@ import { useUI } from '../../../hooks/useUI';
 import useMobile from '../../../hooks/useMobile';
 
 const NAVIGATION_SECTIONS = [
-  { id: 'hero', label: 'Hero', icon: '🏠' },
+  { id: 'home', label: 'home', icon: '🏠' },
   { id: 'skills', label: 'Skills', icon: '📊' },
   { id: 'projects', label: 'Projects', icon: '🚀' },
   { id: 'contact', label: 'Contact', icon: '📧' },
@@ -170,7 +170,7 @@ export default function FloatingNavigation() {
 
   return (
     <AnimatePresence>
-      {/* 桌面端布局 */}
+    
       {!isMobile && isVisible && (
         <div className="fixed bottom-8 inset-x-0 z-40 flex justify-center px-4">
           <motion.nav
@@ -185,7 +185,7 @@ export default function FloatingNavigation() {
             style={{ willChange: 'transform' }}
           >
 
-            {/* 进度条 */}
+  
             <div className="mb-3 w-full bg-neutral-800/60 backdrop-blur-sm rounded-full h-2 overflow-hidden border border-neutral-700/30 shadow-lg">
               <motion.div
                 className="h-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 shadow-lg"
@@ -203,9 +203,9 @@ export default function FloatingNavigation() {
               />
             </div>
 
-            {/* 导航按钮容器 */}
+          
             <div className="flex items-center gap-2 bg-neutral-900/95 backdrop-blur-xl rounded-full px-4 py-3 border border-neutral-600/40 shadow-2xl relative">
-              {/* 背景发光效果 */}
+             
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-blue-500/5 rounded-full" />
 
               {NAVIGATION_SECTIONS.map((section) => (
@@ -225,7 +225,7 @@ export default function FloatingNavigation() {
                     {section.icon}
                   </span>
 
-                  {/* 标签显示优化 - 仅在空间允许时显示 */}
+
                   <AnimatePresence mode="wait">
                     {activeSection === section.id && (
                       <motion.span
@@ -243,7 +243,7 @@ export default function FloatingNavigation() {
                     )}
                   </AnimatePresence>
 
-                  {/* 活动指示器 */}
+                 
                   {activeSection === section.id && (
                     <motion.div
                       layoutId="activeIndicator"
@@ -255,7 +255,7 @@ export default function FloatingNavigation() {
                         duration: 0.3
                       }}
                     >
-                      {/* 脉冲效果 */}
+                  
                       <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"
                         animate={{
@@ -277,7 +277,7 @@ export default function FloatingNavigation() {
         </div>
       )}
 
-      {/* 移动端布局 */}
+ 
       {isMobile && isVisible && !isProjectModalOpen && !isChatbotFocused && (
         <motion.nav
           key="mobile-nav"
@@ -289,7 +289,7 @@ export default function FloatingNavigation() {
           role="navigation"
           aria-label="Main navigation"
         >
-          {/* 进度条 */}
+       
           <div className="mb-2 w-full bg-neutral-800/60 backdrop-blur-sm rounded-full h-1.5 overflow-hidden border border-neutral-700/30 shadow-lg">
             <motion.div
               className="h-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 shadow-lg"
@@ -306,7 +306,7 @@ export default function FloatingNavigation() {
             />
           </div>
 
-          {/* 紧凑型按钮容器 */}
+       
           <div className="flex justify-between items-center gap-0.5 bg-neutral-900/95 backdrop-blur-xl rounded-full px-2 py-1.5 border border-neutral-600/40 shadow-2xl relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-blue-500/5 rounded-full" />
 
