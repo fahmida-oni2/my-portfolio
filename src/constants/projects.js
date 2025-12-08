@@ -2,7 +2,7 @@
 export const PROJECTS = [
     {
       title: "TerraLoom",
-      image: 'https://i.ibb.co.com/3mqHzWLZ/terraloom.png',
+      image: 'https://i.ibb.co.com/1Y34TV43/new-terraloom.png',
       description: {
         summary: "A Sustainable DIY Kits.",
         features: [
@@ -19,7 +19,7 @@ export const PROJECTS = [
     },
     {
     title: "HomeNest",
-    image: 'https://i.ibb.co.com/QhcR2Vq/Homenestpng.png', 
+    image: 'https://i.ibb.co.com/bZytnht/new-home.png', 
     description: {
       summary:
         " A dynamic real estate application ",
