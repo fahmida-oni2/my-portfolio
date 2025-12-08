@@ -18,7 +18,7 @@ export default function Navbar() {
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
-  // Handle click outside to close menu
+ 
   useEffect(() => {
     const handleClickOutside = (event) => {
       const isOutsideMenu =
@@ -34,7 +34,6 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  // Track active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
       const sections = SECTION_LINKS.map((link) => link.href.slice(1));
@@ -50,7 +49,7 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Set initial active section
+    handleScroll(); 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -69,7 +68,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+         
           <div className="flex-shrink-0">
             <motion.span
               className={`text-xl font-bold bg-gradient-to-r bg-clip-text text-transparent ${
@@ -84,7 +83,7 @@ export default function Navbar() {
             </motion.span>
           </div>
 
-          {/* Desktop Navigation - Centered */}
+          
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex items-center space-x-2">
               {SECTION_LINKS.map((item) => {
@@ -131,9 +130,8 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/*  Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Mobile Menu Button */}
+          
             <motion.button
               ref={buttonRef}
               aria-label="Toggle navigation menu"

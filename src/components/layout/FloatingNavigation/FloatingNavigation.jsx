@@ -4,7 +4,7 @@ import { useUI } from '../../../hooks/useUI';
 import useMobile from '../../../hooks/useMobile';
 
 const NAVIGATION_SECTIONS = [
-  { id: 'home', label: 'home', icon: '🏠' },
+  { id: 'hero', label: 'home', icon: '🏠' },
   { id: 'skills', label: 'Skills', icon: '📊' },
   { id: 'projects', label: 'Projects', icon: '🚀' },
   { id: 'contact', label: 'Contact', icon: '📧' },
@@ -19,7 +19,6 @@ export default function FloatingNavigation() {
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    // Prevent scroll restoration that might cause auto-scroll
     if (window.history.scrollRestoration) {
       window.history.scrollRestoration = 'manual';
     }
@@ -33,16 +32,12 @@ export default function FloatingNavigation() {
           const windowHeight = window.innerHeight;
           const documentHeight = document.documentElement.scrollHeight;
 
-          // Show floating nav after scrolling past hero with smoother transition
           setIsVisible(scrollY > windowHeight * 0.2);
-
-          // Calculate scroll progress with smoother calculation
           const progress = (scrollY / (documentHeight - windowHeight)) * 100;
           setScrollProgress(Math.min(100, Math.max(0, progress)));
 
-          // Only update active section after initial mount and when scroll position is stable
           if (isInitialized && scrollY >= 0) {
-            // Determine active section with improved detection
+
             const sections = NAVIGATION_SECTIONS.map(section => ({
               ...section,
               element: document.getElementById(section.id),
@@ -57,7 +52,6 @@ export default function FloatingNavigation() {
               const visibleBottom = Math.min(windowHeight, rect.bottom);
               const visibleHeight = Math.max(0, visibleBottom - visibleTop);
 
-              // Check if this section is the most visible or near the top
               if (visibleHeight > maxVisibleHeight || (rect.top >= -50 && rect.top < 50)) {
                 maxVisibleHeight = visibleHeight;
                 mostVisibleSection = section;
@@ -77,14 +71,14 @@ export default function FloatingNavigation() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    // Longer delay and ensure page is fully loaded before initializing section detection
+
     const initTimer = setTimeout(() => {
-      // Only initialize if we're at the top of the page (scroll position 0 or near 0)
+    
       if (window.scrollY <= 50) {
         setIsInitialized(true);
-        handleScroll(); // Initial call after delay, but only if at top
+        handleScroll(); 
       } else {
-        // If page loaded with scroll position, initialize immediately to track current position
+
         setIsInitialized(true);
         handleScroll();
       }
@@ -99,8 +93,8 @@ export default function FloatingNavigation() {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Calculate offset for floating navigation
-      const offset = 80; // Account for floating nav and some padding
+
+      const offset = 80; 
       const elementPosition = element.offsetTop - offset;
 
       window.scrollTo({
@@ -195,7 +189,7 @@ export default function FloatingNavigation() {
                   ease: "easeOut"
                 }}
               />
-              {/* Glow effect for progress bar */}
+             
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-cyan-500/30 blur-sm"
                 style={{ width: `${scrollProgress}%` }}

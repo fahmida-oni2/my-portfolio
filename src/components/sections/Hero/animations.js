@@ -1,4 +1,3 @@
-// Animation variants for Hero section components
 export const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -53,7 +52,7 @@ export const floatingShapeVariants = {
   },
 };
 
-// Optimized variants for reduced motion preferences
+
 export const floatingShapeVariantsReduced = {
   animate: {
     opacity: [0.3, 0.6, 0.3],

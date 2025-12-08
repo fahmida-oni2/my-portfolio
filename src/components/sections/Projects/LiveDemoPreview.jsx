@@ -97,7 +97,7 @@ const DeviceFrame = ({ children, device = "desktop", theme }) => {
   )
 }
 
-// Removed MobileControls component - now inline in the main component
+
 
 const DesktopControls = ({ device, setDevice, isFullscreen, onToggleFullscreen, theme }) => (
   <div

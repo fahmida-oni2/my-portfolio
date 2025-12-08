@@ -1,4 +1,3 @@
-// Animation variants for Project cards and interactions
 export const cardContainerVariants = {
   hidden: { opacity: 0 },
   visible: {
