@@ -29,7 +29,7 @@ export const PROJECTS = [
         "Detailed neighborhood insights across all listings",
       ]
     },
-    url: "https://homenest-real-estate.netlify.app/",
+    url: "https://my-homenest-app.vercel.app/",
     technologies: {
       main: [
         "React.js",
@@ -59,7 +59,7 @@ export const PROJECTS = [
         "Detailed neighborhood insights across all listings",
       ]
     },
-    url: "https://skillswap-a-learning-platform.netlify.app/",
+    url: "https://skiilswap-learning-platform.vercel.app/",
     technologies: {
       main: [
         "React.js",
@@ -88,7 +88,7 @@ export const PROJECTS = [
         "Detailed neighborhood insights across all listings",
       ]
     },
-    url: "https://hero-app-08a.netlify.app/",
+    url: "https://my-hero-apps-a8.vercel.app/",
     technologies: {
       main: [
         "React.js",

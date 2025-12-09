@@ -149,7 +149,7 @@ export default function Hero() {
             >
               <Button
                 as="a"
-                href='https://drive.google.com/file/d/1yjP6JEfyDh9tmTKRJwF_e2GRYvaugLI4/view?usp=sharing'
+                href='https://drive.google.com/file/d/1avD_QvEXbifM_0nwQ7BjoJCspvqm_lym/view?usp=drive_link'
                 variant="primary"
                 size="lg"
                 loading={isLoading}
