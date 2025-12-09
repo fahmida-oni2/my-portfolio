@@ -88,7 +88,7 @@ export const PROJECTS = [
         "Detailed neighborhood insights across all listings",
       ]
     },
-    url: "https://my-hero-apps-a8.vercel.app/",
+    url: "https://my-hero-apps-a8.vercel.app/ ",
     technologies: {
       main: [
         "React.js",
